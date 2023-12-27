@@ -31,7 +31,7 @@ const DirectoryCityGrid = ({
     childrenDivs = sortedChildren.map((child: any) => (
       <div
         key={child.slug}
-        className="border rounded-lg drop-shadow-md bg-gray-100 space-y-6 p-3 h-60"
+        className="border rounded-lg drop-shadow-md bg-gray-100 space-y-6 p-3 h-auto"
       >
         <h2>
           <a
