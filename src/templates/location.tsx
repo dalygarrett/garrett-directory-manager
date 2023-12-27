@@ -30,6 +30,10 @@ import Hours from "../components/Hours";
 import PageLayout from "../components/PageLayout";
 import EditTool from "../components/EditTool";
 import BreadCrumbs from "../components/Breadcrumbs";
+import ServicesHero from "../components/ServicesHero";
+import Carousel from "../components/Carousel";
+import ContactSection from "../components/ContactSection";
+import LetsTalk from "../components/LetsTalk";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -53,6 +57,7 @@ export const config: TemplateConfig = {
       "mainPhone",
       "description",
       "hours",
+      "emails",
       "slug",
       "geocodedCoordinate",
       "services",
@@ -172,24 +177,37 @@ const Location: Template<TemplateRenderProps> = ({
     services,
     description,
     siteDomain,
+    emails,
+    photoGallery,
+    geocodedCoordinate,
     dm_directoryParents,
   } = document;
 
   return (
     <>
       <PageLayout>
-        <Banner name={name} address={address} />
-        <div className="centered-container">
-          <BreadCrumbs
+      <div className="centered-container">
+      <BreadCrumbs 
             breadcrumbs={dm_directoryParents}
             baseUrl={relativePrefixToRoot}
           />
-          <div className="grid gap-x-10 gap-y-10 md:grid-cols-2">
+      </div>
+      <ServicesHero pageTitle={name} imageUrl={photoGallery[0].image.url} mainphone={mainPhone} email={emails} description={description}></ServicesHero>
+        <div className="centered-container">
+          {/* <div className="grid gap-x-10 gap-y-10 md:grid-cols-2">
             <Details address={address} phone={mainPhone} services={services} />
             {hours && <Hours title={"Restaurant Hours"} hours={hours} />}
             {description && <About name={name} description={description} />}
-          </div>
+          </div> */}
         </div>
+        {/* <LetsTalk
+          description="Welcome"
+          emails={document.emails[0]}
+          formattedPhone={mainPhone}
+          hours={hours}
+        ></LetsTalk> */}
+        <ContactSection address={address} phone={mainPhone} email={emails} latitude={geocodedCoordinate.latitude} longitude={geocodedCoordinate.longitude} contactmessage="Please contact us for any additional information you may need!"/>
+        <Carousel title={"Gallery"} photoGallery={photoGallery}></Carousel>
       </PageLayout>
       {/* This component displays a link to the entity that represents the given page in the Knowledge Graph*/}
       {!isProduction(siteDomain) && <EditTool data={document} />}

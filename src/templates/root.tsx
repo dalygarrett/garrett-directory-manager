@@ -13,6 +13,7 @@ import {
   GetHeadConfig,
   HeadConfig,
 } from "@yext/pages";
+import ServicesHero from "../components/ServicesHero";
 
 export const config: TemplateConfig = {
   stream: {
@@ -78,11 +79,11 @@ const Index: Template<TemplateRenderProps> = ({
   return (
     <>
       <PageLayout>
-        <Banner name={"Turtlehead Tacos"} />
+      <ServicesHero pageTitle="Locations Serviced" imageUrl="https://wbengineering.floodcdn.com/wp-content/uploads/2022/01/Yext_04.webp" mainphone="+12129943900" email="gdaly@yext.com" description="View all of the states we service below!"></ServicesHero>
         <div className="centered-container">
           <div className="section space-y-14 px-10">
             <DirectoryRootGrid
-              name={"Turtlehead Tacos"}
+              name={"States"}
               directoryChildren={dm_directoryChildren}
               relativePrefixToRoot={relativePrefixToRoot}
             />

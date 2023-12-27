@@ -28,6 +28,7 @@ import DirectoryCityGrid from "../components/DirectoryCityGrid";
 import PageLayout from "../components/PageLayout";
 import EditTool from "../components/EditTool";
 import Breadcrumbs from "../components/Breadcrumbs";
+import ServicesHero from "../components/ServicesHero";
 
 export const config: TemplateConfig = {
   stream: {
@@ -116,12 +117,14 @@ const City: Template<TemplateRenderProps> = ({
   return (
     <>
       <PageLayout>
-        <Banner name={name} />
-        <div className="centered-container">
-          <Breadcrumbs
+      <div className="centered-container">
+      <Breadcrumbs 
             breadcrumbs={dm_directoryParents}
             baseUrl={relativePrefixToRoot}
           />
+      </div>
+      <ServicesHero pageTitle={name} imageUrl="https://wbengineering.floodcdn.com/wp-content/uploads/2022/01/Yext_04.webp" mainphone="+12129943900" email="gdaly@yext.com" description="View all of the services available below!"></ServicesHero>
+        <div className="centered-container">
           <DirectoryCityGrid
             name={name}
             description={description}

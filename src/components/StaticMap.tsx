@@ -5,7 +5,7 @@ export interface StaticMapProps {
   longitude: string;
 }
 
-const mapsApiKey = YEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+const mapsApiKey = "AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18";
 
 const StaticMap = (props: StaticMapProps) => {
   const { latitude, longitude } = props;

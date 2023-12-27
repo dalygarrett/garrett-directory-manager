@@ -49,16 +49,16 @@ const Header = () => {
                       key={link.href}
                       buttonText={link.name}
                       url={link.href}
-                      style="inline-flex items-center border-b-4 rounded-none border-transparent hover:border-orange"
+                      style="inline-flex items-center border-b-4 rounded-none border-transparent hover:border-grey"
                     />
                   ))}
                 </div>
               </div>
               <div className="flex items-center">
                 <Cta
-                  buttonText="Order Online"
+                  buttonText="Contact"
                   url="#"
-                  style="text-white bg-orange shadow-md"
+                  style="rounded-md border border-gray-950 text-gray-900 px-3.5 py-2.5 text-2xl font-semibold shadow-sm"
                 />
               </div>
             </div>
