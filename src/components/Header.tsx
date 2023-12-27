@@ -4,8 +4,8 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "#" },
+  { name: "Home", href: "/index.html" },
+  // { name: "About", href: "#" },
 ];
 
 const Header = () => {
@@ -49,7 +49,7 @@ const Header = () => {
                       key={link.href}
                       buttonText={link.name}
                       url={link.href}
-                      style="inline-flex items-center border-b-4 rounded-none border-transparent hover:border-grey"
+                      style="inline-flex items-center border-b-4 rounded-none border-transparent hover:border-gray"
                     />
                   ))}
                 </div>

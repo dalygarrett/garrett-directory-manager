@@ -19,6 +19,7 @@ import Card from "../components/Card";
 import { ExternalImage } from "../types/ExternalImage";
 import Favicon from "../assets/images/yext-favicon.ico";
 import Banner from "../components/Banner";
+import ServicesHero from "../components/ServicesHero";
 
 /**
  * Not required depending on your use case.
@@ -110,12 +111,16 @@ const Static: Template<ExternalImageRenderData> = ({ externalImage }) => {
   return (
     <>
       <PageLayout>
-        <Banner name={"Turtlehead Tacos"} />
-        <div className="centered-container">
-          <div className="section space-y-14 px-10">
-            <Card {...externalImage} />
-          </div>
-        </div>
+      <ServicesHero pageTitle="Home Page" imageUrl="https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1448235305/image_1448235305.jpg?io=getty-c-crop-16-9" mainphone="+12129943900" email="gdaly@yext.com" description="View the services directory below!"></ServicesHero>
+      <div className="centered-container">
+  <a
+    href="/root.html"
+    className="rounded-md border border-gray-950 text-gray-900 px-3.5 py-2.5 text-2xl font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+    style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+  >
+    View Services Directory
+  </a>
+</div>
       </PageLayout>
     </>
   );
