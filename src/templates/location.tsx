@@ -60,6 +60,7 @@ export const config: TemplateConfig = {
       "emails",
       "slug",
       "geocodedCoordinate",
+      "c_contact",
       "services",
       "photoGallery",
       "dm_directoryParents.name",
@@ -180,6 +181,7 @@ const Location: Template<TemplateRenderProps> = ({
     emails,
     photoGallery,
     geocodedCoordinate,
+    c_contact,
     dm_directoryParents,
   } = document;
 
@@ -206,7 +208,7 @@ const Location: Template<TemplateRenderProps> = ({
           formattedPhone={mainPhone}
           hours={hours}
         ></LetsTalk> */}
-        <ContactSection address={address} phone={mainPhone} email={emails} latitude={geocodedCoordinate.latitude} longitude={geocodedCoordinate.longitude} contactmessage="Please contact us for any additional information you may need!"/>
+        <ContactSection address={address} phone={mainPhone} email={emails} latitude={geocodedCoordinate.latitude} longitude={geocodedCoordinate.longitude} contactmessage={c_contact}/>
         <Carousel title={"Gallery"} photoGallery={photoGallery}></Carousel>
       </PageLayout>
       {/* This component displays a link to the entity that represents the given page in the Knowledge Graph*/}
